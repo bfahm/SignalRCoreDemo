@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <input type="button" id="joinGroup" value="Join Private Group" />
+    </div>
+    
+
+    <textarea name="message" id="message"></textarea>
+
+    <select id="group">
+        <option value="All">Everyone</option>
+        <option value="Myself">Myself</option>
+        <option value="PrivateGroup">Private Group</option>
+        <option value="ReturnMyData">ReturnMyData</option>
+    </select>
+
+    <input type="button" id="sendButton" value="Send Message"/>
+
+    <div id="messages"></div>
+
+    
+    
+    
+    <script src="lib/signalr.js"></script>
+    <script src="js/message.js"></script>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
