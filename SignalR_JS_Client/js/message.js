@@ -3,7 +3,7 @@
 //import { signalR } from "../lib/signalr";
 
 var connection = new signalR.HubConnectionBuilder()
-                            .withUrl("http://localhost:5000/messages", {
+                            .withUrl("http://localhost:5566/messages", {
                                 accessTokenFactory: () => "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QHRlc3QuY29tIiwianRpIjoiYzM2Y2U2MmYtMDlhYS00MWRjLTg1ZWMtYzU1YTg2NTdjYTk2IiwiZW1haWwiOiJ0ZXN0QHRlc3QuY29tIiwiaWQiOiJhY2E5MDEwZS1kOTJjLTQ0MWMtOGE4ZC0wZjMwMzQ0ZGQ5YmYiLCJuYmYiOjE1ODMzMzgxMTEsImV4cCI6MTU4MzM0NTMxMSwiaWF0IjoxNTgzMzM4MTExfQ.R1acgKJeA3LT5wzuSevZpbWY1TiYsNdEmLX6aUpzYoA"
                             })
                             .build();

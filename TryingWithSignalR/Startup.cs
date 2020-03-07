@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SignalRChatServer;
 using TryingWithSignalR.Hubs;
 
 namespace TryingWithSignalR
@@ -33,6 +34,11 @@ namespace TryingWithSignalR
                 builder =>
                 {
                     builder.WithOrigins("http://127.0.0.1:5500")
+                                .AllowAnyHeader()
+                                .AllowAnyMethod()
+                                //.AllowAnyOrigin();
+                                .AllowCredentials();
+                    builder.WithOrigins("")
                                 .AllowAnyHeader()
                                 .AllowAnyMethod()
                                 //.AllowAnyOrigin();
@@ -64,6 +70,7 @@ namespace TryingWithSignalR
             {
                 endpoints.MapControllers();
                 endpoints.MapHub<MessageHub>("/messages");
+                endpoints.MapHub<ChatHub>("/Chat");
             });
 
             app.UseMvc();
